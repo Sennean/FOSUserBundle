@@ -12,7 +12,7 @@
 namespace FOS\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
 
 class GroupFormType extends AbstractType
 {
@@ -26,7 +26,7 @@ class GroupFormType extends AbstractType
         $this->class = $class;
     }
 
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name');
     }
