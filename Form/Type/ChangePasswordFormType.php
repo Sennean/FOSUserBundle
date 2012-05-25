@@ -16,12 +16,18 @@ use Symfony\Component\Form\AbstractType;
 
 class ChangePasswordFormType extends AbstractType
 {
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('current', 'password');
         $builder->add('new', 'repeated', array('type' => 'password'));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultOptions()
     {
         return array(
@@ -30,6 +36,9 @@ class ChangePasswordFormType extends AbstractType
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getName()
     {
         return 'fos_user_change_password';

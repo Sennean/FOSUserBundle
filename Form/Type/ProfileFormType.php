@@ -26,6 +26,9 @@ class ProfileFormType extends AbstractType
         $this->class = $class;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $child = $builder->create('user', 'form', array('data_class' => $this->class));
@@ -37,6 +40,9 @@ class ProfileFormType extends AbstractType
         ;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultOptions()
     {
         return array(
@@ -45,6 +51,9 @@ class ProfileFormType extends AbstractType
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getName()
     {
         return 'fos_user_profile';

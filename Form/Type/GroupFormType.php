@@ -26,11 +26,17 @@ class GroupFormType extends AbstractType
         $this->class = $class;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name');
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultOptions()
     {
         return array(
@@ -39,6 +45,9 @@ class GroupFormType extends AbstractType
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getName()
     {
         return 'fos_user_group';

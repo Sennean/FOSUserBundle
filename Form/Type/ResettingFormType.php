@@ -16,11 +16,17 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class ResettingFormType extends AbstractType
 {
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('new', 'repeated', array('type' => 'password'));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultOptions()
     {
         return array(
@@ -29,6 +35,9 @@ class ResettingFormType extends AbstractType
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getName()
     {
         return 'fos_user_resetting';

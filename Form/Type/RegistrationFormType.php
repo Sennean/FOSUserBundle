@@ -26,6 +26,9 @@ class RegistrationFormType extends AbstractType
         $this->class = $class;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -34,6 +37,9 @@ class RegistrationFormType extends AbstractType
             ->add('plainPassword', 'repeated', array('type' => 'password'));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultOptions()
     {
         return array(
@@ -42,6 +48,9 @@ class RegistrationFormType extends AbstractType
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getName()
     {
         return 'fos_user_registration';
